@@ -1,4 +1,4 @@
-# Transformer-Based Embeddings for Cellular Line Representation
+# Enhancing Cellular Line Representation with Transformer-Based Text Embeddings for Precision Drug Repositioning
 
 This repository contains the code and data used for the paper titled **"Enhancing Cellular Line Representation with Transformer-Based Text Embeddings for Precision Drug Repositioning"**. The project focuses on representing cellular lines using transformer-based models to aid in drug discovery and personalized medicine.
 
@@ -47,38 +47,11 @@ pip install -r requirements.txt
 1. Clone the Repository
 
 ```bash
-git clone https://github.com/[username]/cell-line-transformer-embeddings.git
-cd cell-line-transformer-embeddings
+git clone https://github.com/bio-user/smarttech-ic24
 ```
-2. Data Preprocessing
+2. Data Processing
 
-Run the script to preprocess the PubMed abstracts and generate embeddings.
-
-```bash
-python preprocess_data.py --input data/raw_abstracts.csv --output data/preprocessed_abstracts.csv
-```
-
-3. Generate Embeddings
-
-Use the following command to generate embeddings for each abstract using the SentenceTransformer model.
-
-```bash
-python generate_embeddings.py --input data/preprocessed_abstracts.csv --output data/embeddings.npy
-```
-4. Clustering and Visualization
-
-To perform clustering on the generated embeddings and visualize the results using t-SNE, run:
-
-```bash
-python clustering.py --input data/embeddings.npy --clusters 23 --output results/clusters.csv
-```
-5. Evaluation
-
-To evaluate the clusters with Topic Coherence and plot the elbow method for cluster selection, run:
-
-```bash
-python evaluate_clusters.py --input results/clusters.csv --output results/evaluation.txt
-```
+Run the notebook from the notebooks/ folder
 ## Reproducibility
 
 All the steps needed to reproduce the results in the paper are available in this repository. By following the instructions above, you can generate the same embeddings, apply the clustering methods, and visualize the results.
@@ -93,7 +66,7 @@ The results include:
 * Clusters: 23 clusters representing biologically meaningful groupings of cellular lines.
 * Visualization: t-SNE visualization of the clusters.
 
-The final results and evaluation metrics can be found in the results folder.
+The final results and evaluation metrics can be found in the results/ folder.
 
 ## Contributing
 
